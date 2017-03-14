@@ -1,4 +1,4 @@
-package lizo;
+package com.micro.discovery.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

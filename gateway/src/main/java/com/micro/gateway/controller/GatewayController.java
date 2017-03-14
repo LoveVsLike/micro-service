@@ -1,13 +1,17 @@
-package lizo.controller;
+package com.micro.gateway.controller;
 
-import lizo.service.ComputerFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.micro.gateway.service.ComputerFeignService;
+
 /**
- * Created by 李周 on 2016/11/13.
+ * 网关控制
+ * 
+ * @author Dream
+ *
  */
 @RestController
 public class GatewayController {

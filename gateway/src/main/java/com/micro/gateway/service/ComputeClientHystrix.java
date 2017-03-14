@@ -1,4 +1,4 @@
-package lizo.service;
+package com.micro.gateway.service;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;
