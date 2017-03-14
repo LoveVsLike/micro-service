@@ -1,4 +1,4 @@
-package com.micro.gateway.app;
+package com.micro.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 /**
- * Created by 李周 on 2016/11/13.
+ * 
+ * @author Dream
+ *
  */
 @SpringBootApplication
 @EnableEurekaClient

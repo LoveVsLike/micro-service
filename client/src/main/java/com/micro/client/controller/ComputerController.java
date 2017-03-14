@@ -1,6 +1,5 @@
 package com.micro.client.controller;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,22 +11,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 @RestController
 public class ComputerController {
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Value("${my.name}")
-    private String name;
+	@Value("${my.name}")
+	private String name;
 
-    @RequestMapping("/add")
-    public int add(@RequestParam("a") int a, @RequestParam("b") int b) {
-        return a + b;
-    }
+	@RequestMapping("/add")
+	public int add(@RequestParam("a") int a, @RequestParam("b") int b) {
+		return a + b;
+	}
 
-
-    @RequestMapping("/name")
-    public String name() {
-        logger.info("########### call me!!!!!!");
-        return name;
-    }
-
+	@RequestMapping("/name")
+	public String name() {
+		logger.info("########### call me!!!!!!");
+		return name;
+	}
 
 }

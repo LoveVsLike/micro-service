@@ -16,21 +16,20 @@ import com.micro.gateway.service.ComputerFeignService;
 @RestController
 public class GatewayController {
 
-    @Autowired
-    ComputerFeignService computerFeignService;
+	@Autowired
+	ComputerFeignService computerFeignService;
 
-//    @Autowired
-//    ComputerFeignService computerRibbonService;
+	// @Autowired
+	// ComputerFeignService computerRibbonService;
 
-    @RequestMapping("/getadd")
-    public int getadd(@RequestParam("a") int a,@RequestParam("b") int b){
-        return computerFeignService.add(a,b);
-    }
+	@RequestMapping("/getadd")
+	public int getadd(@RequestParam("a") int a, @RequestParam("b") int b) {
+		return computerFeignService.add(a, b);
+	}
 
-    @RequestMapping("/getName")
-    public String getName(){
-        return computerFeignService.name();
-    }
-
+	@RequestMapping("/getName")
+	public String getName() {
+		return computerFeignService.name();
+	}
 
 }
