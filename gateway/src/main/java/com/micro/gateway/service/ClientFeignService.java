@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author Dream
  *
  */
-@FeignClient(value = "computer", fallback = ComputeClientHystrix.class)
-public interface ComputerFeignService {
+@FeignClient(value = "client", fallback = ClientHystrix.class)
+public interface ClientFeignService {
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	int add(@RequestParam("a") Integer a, @RequestParam("b") Integer b);

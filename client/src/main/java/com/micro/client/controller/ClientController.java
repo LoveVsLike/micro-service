@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RefreshScope
 @RestController
-public class ComputerController {
+public class ClientController {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Value("${my.name}")

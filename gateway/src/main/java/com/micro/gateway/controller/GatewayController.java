@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.micro.gateway.service.ComputerFeignService;
+import com.micro.gateway.service.ClientFeignService;
 
 /**
  * 网关控制
@@ -17,19 +17,16 @@ import com.micro.gateway.service.ComputerFeignService;
 public class GatewayController {
 
 	@Autowired
-	ComputerFeignService computerFeignService;
-
-	// @Autowired
-	// ComputerFeignService computerRibbonService;
+	ClientFeignService clientFeignService;
 
 	@RequestMapping("/getadd")
 	public int getadd(@RequestParam("a") int a, @RequestParam("b") int b) {
-		return computerFeignService.add(a, b);
+		return clientFeignService.add(a, b);
 	}
 
 	@RequestMapping("/getName")
 	public String getName() {
-		return computerFeignService.name();
+		return clientFeignService.name();
 	}
 
 }
