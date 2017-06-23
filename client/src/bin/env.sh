@@ -11,8 +11,8 @@ export JAVA_OPTS="-Xms2048m -Xmx2048m -XX:MaxPermSize=256m"
 CONFIG_PATH=$(cd "$(dirname "$0")/../conf";pwd)
 LIB_PATH=$(cd "$(dirname "$0")/../libs";pwd)
 LOG_BASE=$(cd "$(dirname "$0")/../logs";pwd)
-LOG_DIR="$LOG_BASE/$CURRENT_DATE.log"
-export PID_FILE="$LOG_BASE/$APP.pid"
+LOG_DIR="$LOG_BASE/$APP"
+export PID_FILE="$LOG_DIR/$APP.pid"
 
 # 组装 CLASSPATH
 ALL_JARS=$(ls "$LIB_PATH")
