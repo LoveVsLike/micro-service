@@ -11,13 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 @RestController
 public class ClientController {
-	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	private Logger logger = LoggerFactory.getLogger(ClientController.class);
 
 	@Value("${my.name}")
 	private String name;
 
 	@RequestMapping("/add")
 	public int add(@RequestParam("a") int a, @RequestParam("b") int b) {
+		logger.info("a:{},b:{}",a,b);
 		return a + b;
 	}
 
