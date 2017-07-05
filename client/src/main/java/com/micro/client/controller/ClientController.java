@@ -19,6 +19,12 @@ public class ClientController {
 	@RequestMapping("/add")
 	public int add(@RequestParam("a") int a, @RequestParam("b") int b) {
 		logger.info("a:{},b:{}",a,b);
+		try {
+			Thread.sleep(10 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		return a + b;
 	}
 

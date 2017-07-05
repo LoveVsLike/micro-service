@@ -22,7 +22,7 @@ then
 fi
 
 LOGGER_PATH=${LOG_DIR}/../${CURRENT_DATE}.log
-nohup $JAVA_PATH/java $JAVA_OPTS -cp "$CONFIG_PATH:$CLASS_PATH" com.micro.client.ComputerApplication &> $LOGGER_PATH &
+nohup $JAVA_PATH/java $JAVA_OPTS -cp "$CONFIG_PATH:$CLASS_PATH" com.micro.client.ClientApplication &> $LOGGER_PATH &
 #$cmd &> >(tee -a ${LOGGER_PATH})
 echo $! > $PID_FILE
 PID=`cat $PID_FILE`

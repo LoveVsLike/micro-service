@@ -12,4 +12,6 @@ eureka:
     non-secure-port: ${server.port:9111}
   client:
     service-url:
-      defaultZone: http://${eureka.host:localhost}:${eureka.port:8111}/eureka/
+      defaultZone: http://${eureka.instance.hostname:localhost}:${eureka.port:8111}/eureka/
+
+## 负载均衡

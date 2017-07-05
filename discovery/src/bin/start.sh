@@ -21,7 +21,7 @@ then
  fi
 fi
 
-LOGGER_PATH=${3LOG_DIR}/../${CURRENT_DATE}.log
+LOGGER_PATH=${LOG_DIR}/../${CURRENT_DATE}.log
 nohup $JAVA_PATH/java $JAVA_OPTS -cp "$CONFIG_PATH:$CLASS_PATH" com.micro.discovery.app.DiscoveryApplication &> $LOGGER_PATH &
 echo $! > $PID_FILE
 PID=`cat $PID_FILE`
