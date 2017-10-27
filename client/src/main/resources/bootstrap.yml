@@ -8,10 +8,7 @@ spring:
         enabled: true
         service-id: CONFIG #1
 eureka:
-  instance:
-    non-secure-port: ${server.port:9111}
   client:
     service-url:
-      defaultZone: http://${eureka.instance.hostname:localhost}:${eureka.port:8111}/eureka/
+      defaultZone: http://172.17.1.170:8080/eureka/
 
-## 负载均衡
